@@ -1,9 +1,35 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap" rel="stylesheet">
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+    <div class="background-circle"></div>
+		<ion-title class="ion-text-center custom-font">Login</ion-title>
+	</ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen="true">
+
+  <div class="ion-padding">
+
+    <form class="ion-padding">
+
+      <div class="wrap-input">
+        <input class="input" type="text" name="username" placeholder="Username">
+      </div>
+
+      <div class="wrap-input">
+        <input class="input" type="password" name="password" placeholder="Password">
+      </div> 
+
+      <div class="container-form-btn">
+        <button class="form-btn custom-font">
+          Submit
+        </button>
+      </div>   
+
+    </form>
+    
+    <p class="ion-text-center custom-font">Don't have an account? <a href="">Register here!</a></p>
+  
+  </div>
 
 </ion-content>
