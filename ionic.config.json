@@ -1,0 +1,7 @@
+{
+  "name": "deception",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
