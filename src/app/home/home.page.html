@@ -1,22 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Home
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">DECEPTION</ion-title>
+      <ion-title size="medium">DECEPTION</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
     <strong>Welcome To Deception</strong>
-    <p>Ready to Play? <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-    <button id="logoutButton" ion-button  (click)="logout()">Logout</button>
- 
+    <p>Ready to Play? <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI
+        Components</a></p>
+    <button id="logoutButton" ion-button (click)="logout()">Logout</button>
+
   </div>
 </ion-content>
