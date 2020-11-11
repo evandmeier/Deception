@@ -1,0 +1,34 @@
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap" rel="stylesheet">
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+    <div class="background-circle"></div>
+		<ion-title class="ion-text-center custom-font">Register</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+
+  <div class="ion-padding">
+
+    <form class="ion-padding">
+
+      <div class="wrap-input">
+        <input class="input" type="text"  [(ngModel)]="user.email" name="email" placeholder="Email">
+      </div>
+
+      <div class="wrap-input">
+        <input class="input" type="password"  [(ngModel)]="user.password" name="password" placeholder="Password">
+      </div> 
+
+      <div class="container-form-btn">
+        <button ion-button class="form-btn custom-font" (click)="register()">
+          Submit
+        </button>
+      </div>   
+
+    </form>
+    
+    <p class="ion-text-center custom-font">Already have an account? <a href="">Sign in!</a></p>
+  </div>
+
+</ion-content>
