@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from '@ionic/angular';
-
-//this one is importing from auth.service.ts
-//import { AuthService } from '../providers/auth.service';
-
-//the import above would be the correct way, this import is the fast way lol may want to change later
-//but for now just want to get it working. 
 import { AngularFireAuth } from '@angular/fire/auth';
+import { RegisterPage } from "../register/register.page";
 
 export class User {
   email: string;
@@ -24,7 +19,6 @@ export class LoginPage implements OnInit {
   public navParams = new NavParams();
   constructor(
     //dependency injection - taking the authservice from auth.service.ts and making it usable on this page https://angular.io/guide/architecture-services
-    //private authService: AngularFireAuth
     public navCtrl: NavController,
     public fAuth: AngularFireAuth
   ) {
@@ -45,12 +39,13 @@ export class LoginPage implements OnInit {
     }
   }
 
+  //ngOnIt is similar to onstart in android
   ngOnInit() {
   }
 
-  //login method calling the login method from the auth that we built
-  // login() {
-  //   this.authService.login();
-  // }
-
+  //this is used to call on the button to go to the register page. Dont forget to import
+  //the page you need at the top of the screen
+  navigateToRegisterPage(): void {
+    this.navCtrl.navigateForward('register')
+  }
 }
