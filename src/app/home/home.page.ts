@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { NavController, NavParams } from '@ionic/angular';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { RegisterPage } from "../register/register.page";
+
 
 @Component({
   selector: 'app-home',
@@ -7,6 +11,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  public navParams = new NavParams();
+
+  constructor(
+    public navCtrl: NavController,
+    public fAuth: AngularFireAuth
+  ) { }
+
+  logout() {
+    this.fAuth.signOut();
+    this.navCtrl.navigateRoot('login');
+    console.log('sign out successful');
+  }
 
 }
